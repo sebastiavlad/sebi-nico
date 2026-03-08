@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+    background-image: url('https://i.pinimg.com/736x/6d/cc/0e/6dcc0ec4bed36a8155804f900b79aa67.jpg'); /* pastel pink dreamy cu inimioare */
+    background-size: cover;
+    background-position: center;
+    font-family: 'Pacifico', cursive;
+    color: #000000; /* text negru clar */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-shadow: 0 0 8px #FF69B4, 0 0 12px #FF1493; /* neon soft roz ca să iasă textul */
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.25); /* semi-transparent alb pentru citire mai bună */
+    border-radius: 25px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 32px rgba(255, 105, 180, 0.4);
+}
+
+h1, h2 {
+    font-size: 2.8em;
+    margin: 20px 0;
+}
+
+p {
+    font-size: 1.6em;
+    line-height: 1.4;
+    margin: 15px 0;
+}
+
+img {
+    max-width: 280px;
+    margin: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+}
+
+a {
+    color: #FF1493;
+    text-decoration: none;
+    font-size: 1.6em;
+}
+
+.button {
+    background: linear-gradient(135deg, #FF69B4, #FF1493);
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 50px;
+    box-shadow: 0 0 20px #FF69B4;
+    cursor: pointer;
+    font-size: 1.8em;
+    display: inline-block;
+    margin: 30px 0;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #FF1493;
+}
+
+.heart-secret {
+    font-size: 60px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 30px 0;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+#hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.heart {
+    position: absolute;
+    font-size: 24px;
+    animation: fall linear infinite;
+    color: #FF1493;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-120%) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(120vh) rotate(360deg); opacity: 0; }
+}
